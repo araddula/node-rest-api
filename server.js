@@ -8,7 +8,7 @@ const {
   createProduct,
   updateProduct,
   deleteProduct
-} = require("./public/controllers/productController");
+} = require("./controllers/productController");
 
 const READ_API_MATCH = "/api/products";
 const WRITE_API_MATCH = /\/api\/products\/\w+/;
