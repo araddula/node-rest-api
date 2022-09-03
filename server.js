@@ -1,4 +1,4 @@
-const http = require('http');
+const https = require('http');
 const { 
   getProducts, 
   getProduct, 
@@ -10,7 +10,7 @@ const {
 const READ_API_MATCH = "/api/products";
 const WRITE_API_MATCH = /\/api\/products\/\w+/;
 
-const server = http.createServer((req, res) => {
+const server = https.createServer((req, res) => {
   const id = req.url.split("/")[3];
   if(req.url === READ_API_MATCH && req.method === "GET") {
     getProducts(req, res);
